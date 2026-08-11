@@ -4,14 +4,14 @@ class Envie < Formula
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/fearlessfara/envie/releases/download/v0.1.0/envie-0.1.0-darwin-universal.tar.gz"
-    sha256 "d6b5e9695ae8bf46058df2090d92becf363140ce40f1372baabcbc9ac8ea5b0c"
+    url "https://github.com/fearlessfara/envie/releases/download/v0.2.0/envie-0.2.0-darwin-universal.tar.gz"
+    sha256 "fa00a6882abd35dee6c3b48648774b8a4053384679c876f7e98800944ab995d2"
   elsif Hardware::CPU.intel?
-    url "https://github.com/fearlessfara/envie/releases/download/v0.1.0/envie-0.1.0-linux-x86_64.tar.gz"
-    sha256 "6b53096253dd400bba0d4ba7171815e5fcedf6531a4444c3eaf52227167e4987"
+    url "https://github.com/fearlessfara/envie/releases/download/v0.2.0/envie-0.2.0-linux-x86_64.tar.gz"
+    sha256 "3a0029bca8a42cfd3f196aa96c461a5f8030d54b5fd6441caf8cfd85a4cb676b"
   else
-    url "https://github.com/fearlessfara/envie/releases/download/v0.1.0/envie-0.1.0-linux-aarch64.tar.gz"
-    sha256 "72d41d58b4e635e7209658dccc9380ecf26dc7d8b4455a130697ffc00e2044fa"
+    url "https://github.com/fearlessfara/envie/releases/download/v0.2.0/envie-0.2.0-linux-aarch64.tar.gz"
+    sha256 "0102805f989c93f98435ae386f477c8d98f421fba92c1f7ba88c350eb3eaa222"
   end
 
   def install
@@ -19,6 +19,6 @@ class Envie < Formula
   end
 
   test do
-    assert_match "envie 0.1.0", shell_output("#{bin}/envie --version")
+    assert_match "envie 0.2.0", shell_output("#{bin}/envie --version")
   end
 end
